@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Montserrat:wght@200&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -11,13 +11,13 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
   background-color: rgb(245, 245, 245); /* Light Grey */
-  font-family: 'Commissioner', sans-serif;
+  font-family: Commissioner, sans-serif;
   font-size: 1.5em; /* 24/16 = 1.5em */
   line-height: 1.2em; /* 28.8/ 24 = 1.2em */
 }
 
 header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 h1 {
@@ -32,7 +32,11 @@ h1 {
 .title-nav {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   font-size: 37.5px; /* 37.5 / 24 = 1.5625em */
+=======
+  font-size: 1.5625em; /* 37.5 / 24 = 1.5625em */
+>>>>>>> upstream/main
   justify-content: center;
   text-decoration: none;
   line-height: 1.28em; /* 48 / 37.5 = 1.28em */
@@ -40,7 +44,10 @@ h1 {
   color: rgb(245, 245, 245); /* Light Grey */
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main
 h2 {
   font-size: 1.25em; /* 30 / 24 = 1.25em */
   line-height: 1.2em; /* 36 / 30 = 1.2em */
@@ -73,14 +80,71 @@ p {
   padding-left: 1.25em; /* 19.2 / 15.36 = 0.78125em */
 }
 
+p.data-error {
+  padding-top: 0.5em;
+  padding-left: 0;
+  color: rgb(237, 67, 55);
+  font-weight: bold;
+}
+
 button {
-  font-family: 'Commissioner', Arial, sans-serif;
+  font-family: Commissioner, Arial, sans-serif;
   padding: 0.512em;
   border: none;
 }
 
-.item-button{
-  font-family: 'Commissioner', Arial, sans-serif;
+#order-info.items input[type="button"] {
+  display: none;
+}
+
+.js #order-info.items input[type="button"] {
+  display: block;
+}
+
+fieldset li {
+  padding-top: 0.5em;
+}
+
+.nav-info li {
+  font-size: 0.7999999999999999em; /* 19.2 / 24 = 0.7999999999999999em*/
+}
+
+#proceed li {
+  padding-bottom: 1em;
+}
+
+#order-info.items li {
+  display: grid;
+  justify-content: center;
+}
+
+.js .items h4,
+.js .items p {
+  padding-left: 0;
+}
+
+
+input[type="checkbox"] {
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  margin-left: 0.5em;
+  width: auto;
+}
+
+#order-info.items input[type="checkbox"],
+#order-info.items header,
+#order-info.items figure,
+#order-info.items p {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-button {
+  font-family: Commissioner, Arial, sans-serif;
   padding: 0.512em;
 }
 
@@ -91,11 +155,6 @@ button {
 form h3 {
   padding-top: 1em;
   padding-bottom: 0;
-}
-
-.js .items h4,
-.js .items p {
-  padding-left: 0;
 }
 
 #label-processed h2,
@@ -113,24 +172,55 @@ input, #country-name {
   padding-top: 0.4em;
 }
 
+article input {
+  margin: 1em;
+}
+
+.items article {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.qty {
+  margin: 1em;
+}
+
+.items .qty {
+  width: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.items input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.items input:hover {
+  cursor: pointer;
+}
+
+.items input[type="image"]:hover {
+  cursor: default;
+}
+
+input.error {
+  color: rgb(237, 67, 55);
+  border-color: rgb(237, 67, 55);
+}
+
 label[for="same-as-shipping"],
 label[for="check-to-fail"] {
   cursor: pointer;
   padding-left: 0.5em;
 }
 
-input[type="checkbox"] {
-  -ms-transform: scale(2);
-  -moz-transform: scale(2);
-  -webkit-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
-  margin-left: 0.5em;
-  width: auto;
-}
-
 #fail-simulation {
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 0.8em;
 }
 
@@ -155,10 +245,6 @@ fieldset {
   padding: 0.8em;
 }
 
-fieldset li {
-  padding-top: 0.5em;
-}
-
 fieldset ol {
   column-gap: 0.5em;
   display: grid;
@@ -166,6 +252,12 @@ fieldset ol {
 
 #x-button input {
   display: none;
+}
+
+#confirm h3 {
+  color: rgb(0, 157, 224);
+  font-weight: bold;
+  letter-spacing: 0.0625em /*1.5/24 == 0.0625em*/ ;
 }
 
 /* checkmark when added to cart*/
@@ -176,10 +268,11 @@ fieldset ol {
 .js #bag input {
   display: block;
   position: absolute;
-  top: 4em;
-  left: 4em;
-  margin-left: 4em;
+  margin-top: 4em;
+  right: 0;
   max-width: 5em;
+  filter: invert(75%);
+  -webkit-filter: invert(75%);
 }
 
 .js #cart {
@@ -291,10 +384,6 @@ li.active a {
   color: white;
 }
 
-.nav-info li {
-  font-size: 0.7999999999999999em; /* 19.2 / 24 = 0.7999999999999999em*/
-}
-
 #order-info.confirm h3 {
   padding-top: 2em;
 }
@@ -302,10 +391,6 @@ li.active a {
 #page-header {
   background-color: rgb(0, 157, 224);
   color: rgb(245, 245, 245); /* Light Grey */
-}
-
-#proceed li {
-  padding-bottom: 1em;
 }
 
 #proceed #submit {
@@ -351,8 +436,10 @@ li.active a {
     "state state state"
     "city city city"
     "address address address"
-    "zip apt apt"
-    "cc phone phone";
+    "zip zip zip"
+    "apt apt apt"
+    "cc cc cc"
+    "phone phone phone";
 
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -478,14 +565,12 @@ li.active a {
   grid-area: phone;
 }
 
-#confirm section {
-  margin-bottom: 2em; /* 48/ 24 = 2em */
+.js #order-info.items li {
+  display: block;
 }
 
-#confirm h3 {
-  color: rgb(0, 157, 224);
-  font-weight: bold;
-  letter-spacing: 0.0625em /*1.5/24 == 0.0625em*/ ;
+#confirm section {
+  margin-bottom: 2em; /* 48/ 24 = 2em */
 }
 
 @media screen and (min-width: 12.625em) /* 202px = 12.625em */ {
@@ -500,11 +585,16 @@ li.active a {
     font-size: 1.75em; /* 42 / 24 = 1.75em */
     line-height: 1.142857em; /* 48 / 42 = 1.142857em */
     padding: 0.457142857em; /* 19.2 / 42 = 0.457142857em */
+<<<<<<< HEAD
   }
 
   .js #bag input {
     visibility: hidden;
+=======
+>>>>>>> upstream/main
   }
+
+
 
   fieldset ol {
     column-gap: 0.5em;
@@ -528,7 +618,7 @@ li.active a {
   }
 
   .js #bag input {
-    visibility: hidden;
+    top: 0;
   }
 
   fieldset ol {
@@ -544,19 +634,6 @@ li.active a {
 
 @media screen and (min-width: 15.25em) /* 244px = 15.25em */ {
 
-  #submit {
-    margin-top: 49em;
-  }
-
-  .js #submit {
-    margin-top: 25em;
-  }
-
-  /* .js #store-submit {
-    margin-top: 2em;
-  } 
-  STORE BUTTON */
-
   fieldset ol {
     column-gap: 0.5em;
     display: block;
@@ -567,9 +644,12 @@ li.active a {
 
   .js #bag input {
     visibility: visible;
-    left: -3.5em;
+    left: 0;
+    margin-top: auto;
     max-width: 5em;
-    margin-top: -10em;
+    top: -5em;
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
   }
 
   fieldset ol {
@@ -601,22 +681,6 @@ li.active a {
     padding: 0.25em;
   }
 
-  .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-  }
-
-  .js .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    padding: 0.5em;
-  }
-
-  #submit {
-    margin-top: 20em;
-  }
 
   #proceed #submit {
     width: 8em;
@@ -633,11 +697,15 @@ li.active a {
 
 }
 
+.items > li {
+  margin: 1.2em; /* 28.8/ 24 = 1.2em */
+}
+
+.item-button {
+  max-width: 300px;
+}
 @media screen and (min-width: 23.25em) /* 372px = 23.25em */ {
 
-  .js #bag input {
-    margin-top: -10em;
-  }
   fieldset ol {
     column-gap: 0.5em;
     display: block;
@@ -646,10 +714,6 @@ li.active a {
 }
 
 @media screen and (min-width: 26.25em)  /* 420px = 26.25em */ {
-
-  .js #bag input {
-    margin-top: -10em;
-  }
 
   fieldset ol {
     column-gap: 0.5em;
@@ -685,6 +749,21 @@ li.active a {
     color: rgb(245, 245, 245); /* Light Grey */
   }
 
+}
+
+@media screen and (min-width: 33.75em) /* 540px = 33.75em */ {
+  .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+  }
+
+  .js .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    padding: 0.5em;
+  }
 }
 
 @media screen and (min-width: 31.25em)  /* 500px = 31.25em */ {
@@ -730,16 +809,14 @@ li.active a {
 
   footer {
     font-size: 0.64em; /* 15.36 / 24 = 0.64em */
-    padding-left: 1.25em; /* 19.2 / 15.36 = 1.25em */
-    float: left;
   }
 
   aside {
-    width: 36%;
     padding-left: 0.5em;
     margin-left: 0.5em;
-    float: right;
     box-shadow: -0.5em -0.5em rgb(0, 157, 224);
+    grid-column-start: 2;
+    grid-row-start: 2;
   }
 
   .js #bag input {
@@ -753,7 +830,9 @@ li.active a {
   .js #cart {
     box-shadow: none;
     display: block;
-    position: static;
+    position: relative;
+    height: auto;
+    width: auto;
   }
 
   .js #cart h3 {
@@ -762,7 +841,7 @@ li.active a {
 
   /* checkmark when added to cart*/
   .item-button[type="image"] {
-  max-width: 10em; /* 240 / 24 = 10em*/
+    max-width: 10em; /* 240 / 24 = 10em*/
   }
 
   fieldset ol {
@@ -770,19 +849,96 @@ li.active a {
     display: grid;
   }
 
-  .items{
+  main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .js .items {
-    justify-content: space-around;
+  .buttons {
+    grid-column-start: 1;
+  }
+
+  header {
+    grid-column-start: 1;
+  }
+
+  #label-shipping,
+  #label-billing,
+  #label-payment {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  #order-info.items {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
   }
 
   form {
-    float: left;
-    max-width: 62%;
+    grid-column-start: 1;
+    grid-row-start: 2;
   }
+
+  #shipping-form,
+  #billing-form,
+  #payment-form {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  #processed {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+  }
+
+  #order-info {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+
+  #order-info.confirm {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+  }
+
+  #shipping-info.confirm {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+  }
+
+  #billing-info.confirm {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 4;
+  }
+
+  #payment-info.confirm {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 5;
+  }
+
+  #summary-info.confirm {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 6;
+  }
+
+  #fail-simulation {
+    grid-column-start: 1;
+    grid-row-start: 7;
+  }
+
+  #proceed {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 8;
+  }
+
 
   p {
     font-size: 0.7999999999999999em; /* 19.2 / 24 = 0.7999999999999999em*/
@@ -802,51 +958,18 @@ li.active a {
     line-height: 1.2em; /* 36 / 30 = 1.2em */
   }
 
-  .js footer {
-    position: absolute;
-    top: 110em;
-  }
-
-  footer.billing {
-    top: 69em;
-  }
-
-  .js footer.billing {
-    top: 72em;
-  }
-
-  footer.payment {
-    top: 47em;
-  }
-
-  footer.confirm {
-    top: 125em;
-  }
-
   #submit {
-    width: 35.25%;
-    margin-top: -22.75em;
-
+    width: 10em;
   }
 
-  .js #submit {
-    margin-top: 7em;
+  fieldset[name="shopping-form"] #submit {
+    bottom: -3em;
   }
 
-  #billing-form #submit {
-    margin-top: -22.75em;
-  }
-
+  #shipping-form #submit,
+  #billing-form #submit,
   #payment-form #submit {
-    left: 1.45em;
-    margin-top: 1em;
-    right: 0;
-    width: 56.9%;
-    max-width: 54.5em;
-  }
-
-  .js #billing-form #submit {
-    margin-top: -22.8em;
+    position: static;
   }
 
   #price-values {
@@ -860,4 +983,12 @@ li.active a {
     padding-bottom: 1.66666667em /*40px/24 == 1.66666667em*/;
   }
 
+}
+
+@media screen and (min-width: 62.5em) /* 1000px = 62.5em */ {
+  .js .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+  }
 }
